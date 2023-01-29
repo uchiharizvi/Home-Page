@@ -1,131 +1,183 @@
+<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-.dropbtn {
-  background-color: #F44A26;
-  color: black;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
+body {
+  font-family: "Lato", sans-serif;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #32B1DD;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
   z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
 }
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
   text-decoration: none;
+  font-size: 20px;
+  color: #818181;
   display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
 }
 
-.dropdown-content a:hover {background-color: #47F91F;}
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
 
-.dropdown:hover .dropdown-content {display: block;}
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
 
-.dropdown:hover .dropbtn {background-color: #EEF823;}
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: green;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
 </style>
 <style>
 body {
-  background-image: url('background.png');
+  background-image: url('bg_division.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
 </style>
-<style>
-a {
-	target="_blank";
-	rel="noopener noreferrer";
-}
-right{text-align: right;}
-</style>
 </head>
-<Body>
-<div class="dropdown">
-  <button class="dropbtn">I Cloud</button>
-  <div class="dropdown-content">
-    <a href="https://beta.icloud.com/mail/" target="_blank" rel="noopener noreferrer">Mail</a>
+<body>
+
+<div class="sidenav">
+  <button class="dropdown-btn">Mails 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+	<a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" rel="noopener noreferrer">Google Mail</a>
+    <a href="https://beta.icloud.com/mail/" target="_blank" rel="noopener noreferrer">ICloud Mail</a>
+  </div>
+  <button class="dropdown-btn">Code Repos
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+	<a href="https://gitlab.com/" target="_blank" rel="noopener noreferrer">Git Lab</a>
+    <a href="https://github.com/uchiharizvi" target="_blank" rel="noopener noreferrer">Git Hub</a>
+	<a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" rel="noopener noreferrer">Microsoft Azure Repository</a>
+	<a href="https://bitbucket.org/dashboard/overview" target="_blank" rel="noopener noreferrer">Alassian Repository</a>
+	<a href="https://sourceforge.net/directory/windows/" target="_blank" rel="noopener noreferrer">Sourceforge</a>
+	<a href="https://launchpad.net/" target="_blank" rel="noopener noreferrer">Launchpad</a>
+	<a href="https://savannah.gnu.org/" target="_blank" rel="noopener noreferrer">Savannah GNU</a>
+	<a href="https://ccpforge.cse.rl.ac.uk/gf/" target="_blank" rel="noopener noreferrer">CCP Forge</a>
+	<a href="https://launchpad.net/" target="_blank" rel="noopener noreferrer">Launchpad</a>
+	<a href="https://www.turnkeylinux.org/revision-control" target="_blank" rel="noopener noreferrer">Turnkey Linux</a>
+	<a href="https://www.tuxfamily.org/" target="_blank" rel="noopener noreferrer">Tux Family</a>
+	<a href="https://pulpproject.org/" target="_blank" rel="noopener noreferrer">Pulp</a>
+	<a href="https://gna.org/" target="_blank" rel="noopener noreferrer">Forgejo GNA</a>
+	<a href="https://www.perforce.com/products/helix-teamhub" target="_blank" rel="noopener noreferrer">Helix</a>
+	<a href="https://pypi.org/project/kforge/" target="_blank" rel="noopener noreferrer">K Forge</a>
+	<a href="https://www.jenkins.io/" target="_blank" rel="noopener noreferrer">Jenkins</a>
+	<a href="https://gogs.io/" target="_blank" rel="noopener noreferrer">Gogs.io</a>
+  </div>
+  <button class="dropdown-btn">Shop 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+	<a href="https://www.amazon.in/?ref_=nav_custrec_signin" target="_blank" rel="noopener noreferrer">Amazon IN</a>
+	<a href="https://www.flipkart.com/" target="_blank" rel="noopener noreferrer">Flipkart</a>
+	<a href="https://www.myntra.com/?utm_source=dms_google" target="_blank" rel="noopener noreferrer">Myntra</a>
+	<a href="https://www.apple.com/in/?cid-oas-in-domains-apple.in/" target="_blank" rel="noopener noreferrer">Apple IN</a>
+	<a href="https://www.pepperfry.com/" target="_blank" rel="noopener noreferrer">Pepperfry</a>
+  </div>
+  <button class="dropdown-btn">Video Games 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+	<a href="https://store.steampowered.com/" target="_blank" rel="noopener noreferrer">Steam</a>
+	<a href="#" target="_blank" rel="noopener noreferrer">Epic Games</a>
+	<a href="https://ubisoftconnect.com/en-US/dashboard/" target="_blank" rel="noopener noreferrer">Ubisoft</a>
+	<a href="https://library.playstation.com/recently-purchased" target="_blank" rel="noopener noreferrer">Playstation Store</a>
+	<a href="https://fitgirl-repacks.site/2023/01/" target="_blank" rel="noopener noreferrer">Fitgirl Repack</a>
+  </div>
+  <button class="dropdown-btn">I Cloud
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+	<a href="https://beta.icloud.com/mail/" target="_blank" rel="noopener noreferrer">Mail</a>
     <a href="https://beta.icloud.com/numbers/" target="_blank" rel="noopener noreferrer">Numbers</a>
     <a href="https://beta.icloud.com/iclouddrive/" target="_blank" rel="noopener noreferrer">Drive</a>
 	<a href="https://beta.icloud.com/photos/" target="_blank" rel="noopener noreferrer">Photos</a>
 	<a href="https://beta.icloud.com/notes/0ccKyq1GCyGk1wMRuu8IlRRKQ" target="_blank" rel="noopener noreferrer">Notes</a>
   </div>
-</div>
-<div class="dropdown">
-  <button class="dropbtn">Emails</button>
-  <div class="dropdown-content">
-    <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" rel="noopener noreferrer">Google Mail</a>
-	<a href="https://beta.icloud.com/mail/" target="_blank" rel="noopener noreferrer">ICloud Mail</a>
-  </div>
-</div>
-<div class="dropdown">
-  <button class="dropbtn">Code Repositories</button>
-  <div class="dropdown-content">
-    <a href="https://github.com/uchiharizvi" target="_blank" rel="noopener noreferrer">Github Repository</a>
-	<a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" rel="noopener noreferrer">Microsoft Azure Repository</a>
-  </div>
-</div>
-<div class="dropdown">
-  <button class="dropbtn">Microsoft Account</button>
-  <div class="dropdown-content">
-    <a href="https://account.microsoft.com/?refd=login.live.com" target="_blank" rel="noopener noreferrer">Account Home Page</a>
-	<a href="https://portal.azure.com/#home" target="_blank" rel="noopener noreferrer">Microsoft Azure Home</a>
-  </div>
-</div>
-<div class="dropdown">
-  <button class="dropbtn">Cloud Drives</button>
-  <div class="dropdown-content">
-    <a href="https://drive.google.com/drive/my-drive" target="_blank" rel="noopener noreferrer">Google Drive</a>
+  <button class="dropdown-btn">Cloud Drives
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+	<a href="https://drive.google.com/drive/my-drive" target="_blank" rel="noopener noreferrer">Google Drive</a>
 	<a href="https://photos.google.com/?tab=oq&pageId=none&pli=1" target="_blank" rel="noopener noreferrer">Google Photos</a>
 	<a href="https://onedrive.live.com/?id=root&cid=D526F89E3BAB25BD" target="_blank" rel="noopener noreferrer">One Drive</a>
 	<a href="https://www.dropbox.com/home" target="_blank" rel="noopener noreferrer">Dropbox</a>
 	<a href="https://beta.icloud.com/iclouddrive/" target="_blank" rel="noopener noreferrer">ICloud Drive</a>
 	<a href="https://beta.icloud.com/photos/" target="_blank" rel="noopener noreferrer">ICloud Photos</a>
   </div>
+  <a href="https://www.icloud.com/numbers/004XnjZedG_UBH4WtiOIDJqWA#Credential_Information" target="_blank" rel="noopener noreferrer">Credentials</a>
 </div>
-<div class="dropdown">
-  <button class="dropbtn">Shopping</button>
-  <div class="dropdown-content">
-    <a href="https://www.amazon.in/?ref_=nav_custrec_signin" target="_blank" rel="noopener noreferrer">Amazon IN</a>
-	<a href="https://www.flipkart.com/" target="_blank" rel="noopener noreferrer">Flipkart</a>
-	<a href="https://www.myntra.com/?utm_source=dms_google" target="_blank" rel="noopener noreferrer">Myntra</a>
-	<a href="https://www.apple.com/in/?cid-oas-in-domains-apple.in/" target="_blank" rel="noopener noreferrer">Apple IN</a>
-	<a href="https://www.pepperfry.com/" target="_blank" rel="noopener noreferrer">Pepperfry</a>
-  </div>
-</div>
-<div class="dropdown">
-  <button class="dropbtn">Video Games</button>
-  <div class="dropdown-content">
-    <a href="https://store.steampowered.com/" target="_blank" rel="noopener noreferrer">Steam</a>
-	<a href="#" target="_blank" rel="noopener noreferrer">Epic Games</a>
-	<a href="https://ubisoftconnect.com/en-US/dashboard/" target="_blank" rel="noopener noreferrer">Ubisoft</a>
-	<a href="https://library.playstation.com/recently-purchased" target="_blank" rel="noopener noreferrer">Playstation Store</a>
-	<a href="https://fitgirl-repacks.site/2023/01/" target="_blank" rel="noopener noreferrer">Fitgirl Repack</a>
-  </div>
-</div>
-<div class="dropdown">
-  <button class="dropbtn">Upskilling</button>
-  <div class="dropdown-content">
-    <a href="#" target="_blank" rel="noopener noreferrer">Mongo DB Cluster</a>
-	<a href="#" target="_blank" rel="noopener noreferrer">Apigee Edge</a>
-	<a href="#" target="_blank" rel="noopener noreferrer">Ubisoft</a>
-	<a href="https://library.playstation.com/recently-purchased" target="_blank" rel="noopener noreferrer">Playstation Store</a>
-  </div>
-</div>	
-<a href="https://www.icloud.com/numbers/004XnjZedG_UBH4WtiOIDJqWA#Credential_Information" target="_blank" rel="noopener noreferrer" text-align="right" color="#E9F800">My Credentials</a>
-</Body>
 
-</Html>
+<div class="main">
+</div>
+
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html> 
