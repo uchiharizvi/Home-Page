@@ -12,6 +12,7 @@
     <!--<script src="https://kit.fontawesome.com/b372081e34.js" crossorigin="anonymous"></script>-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://kit.fontawesome.com/kavish-icons.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="icons.css">
     <style>
         body {
             font-family: "Lato", sans-serif;
@@ -21,7 +22,7 @@
         .sidenav {
             height: 100%;
             width: 200px;
-            position: fixed;
+            position: relative;
             z-index: 1;
             top: 0;
             left: 0;
@@ -33,12 +34,12 @@
         /* Style the sidenav links and the dropdown button */
         .sidenav a, .dropdown-btn {
             padding: 6px 8px 6px 16px;
-            text-decoration: none;
+            text-decoration: #47F91F;
             font-size: 20px;
-            color: #818181;
+            color: #47F91F;
             display: block;
-            border: none;
-            background: none;
+            border: #47F91F;
+            background: #111111;
             width: 100%;
             text-align: left;
             cursor: pointer;
@@ -104,10 +105,12 @@
         <i class="fa fa-solid fa-caret-down"></i>
     </button>
     <div class="dropdown-container">
-        <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" rel="noopener noreferrer"><i
-                class="fa fa-brands fa-google"></i></a>
-        <a href="https://beta.icloud.com/mail/" target="_blank" rel="noopener noreferrer"><i
-                class="fa fa-brands fa-apple"></i></a>
+        <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" rel="noopener noreferrer">
+            <i class="fa fa-brands fa-google"></i>
+        </a>
+        <a href="https://beta.icloud.com/mail/" target="_blank" rel="noopener noreferrer">
+            <i class="fa fa-brands fa-apple"></i>
+        </a>
     </div>
     <button class="dropdown-btn">
         <i class="fa fa-solid fa-code"></i>
@@ -139,15 +142,19 @@
         <a href="https://gogs.io/" target="_blank" rel="noopener noreferrer">Gogs.io</a>
     </div>
     <button class="dropdown-btn">
-        Shop
+<!--        <i class="fa fa-solid fa-tag"></i>-->
+        <i class="fa fa-solid fa-cart-plus"></i>
         <i class="fa fa-solid fa-caret-down"></i>
     </button>
     <div class="dropdown-container">
         <a href="https://www.amazon.in/?ref_=nav_custrec_signin" target="_blank" rel="noopener noreferrer"><i class="fa fa-brands fa-amazon"></i></a>
-        <a href="https://www.flipkart.com/" target="_blank" rel="noopener noreferrer">Flipkart</a>
+        <a href="https://www.flipkart.com/" target="_blank" rel="noopener noreferrer">
+            Flipkart
+        </a>
         <a href="https://www.myntra.com/?utm_source=dms_google" target="_blank" rel="noopener noreferrer">Myntra</a>
-        <a href="https://www.apple.com/in/?cid-oas-in-domains-apple.in/" target="_blank" rel="noopener noreferrer">Apple
-            IN</a>
+        <a href="https://www.apple.com/in/?cid-oas-in-domains-apple.in/" target="_blank" rel="noopener noreferrer">
+            <i class="fa fa-brands fa-apple"></i>
+        </a>
         <a href="https://www.pepperfry.com/" target="_blank" rel="noopener noreferrer">Pepperfry</a>
     </div>
     <button class="dropdown-btn">
@@ -171,17 +178,6 @@
         </a>
     </div>
     <button class="dropdown-btn">
-        <i class="fa fa-brands fa-apple"></i>
-        <i class="fa fa-solid fa-caret-down"></i>
-    </button>
-    <div class="dropdown-container">
-        <a href="https://beta.icloud.com/mail/" target="_blank" rel="noopener noreferrer">Mail</a>
-        <a href="https://beta.icloud.com/numbers/" target="_blank" rel="noopener noreferrer">Numbers</a>
-        <a href="https://beta.icloud.com/iclouddrive/" target="_blank" rel="noopener noreferrer">Drive</a>
-        <a href="https://beta.icloud.com/photos/" target="_blank" rel="noopener noreferrer">Photos</a>
-        <a href="https://beta.icloud.com/notes/0ccKyq1GCyGk1wMRuu8IlRRKQ" target="_blank" rel="noopener noreferrer">Notes</a>
-    </div>
-    <button class="dropdown-btn">
         <i class="fa fa-solid fa-cloud"></i>
         <i class="fa fa-solid fa-caret-down"></i>
     </button>
@@ -199,7 +195,8 @@
         <a href="https://beta.icloud.com/iclouddrive/" target="_blank" rel="noopener noreferrer">ICloud Drive</a>
         <a href="https://beta.icloud.com/photos/" target="_blank" rel="noopener noreferrer">ICloud Photos</a>
     </div>
-    <button class="dropdown-btn">Upskill
+    <button class="dropdown-btn">
+        <i class="fa fa-solid fa-graduation-cap"></i>
         <i class="fa fa-solid fa-caret-down"></i>
     </button>
     <div class="dropdown-container">
@@ -217,14 +214,22 @@
         </div>
         <a href="https://leetcode.com/" target="_blank" rel="noopener noreferrer"> Leetcode </a>
     </div>
-    <button class="dropdown-btn">Utilities
+    <button class="dropdown-btn">
+        <i class="fa fa-solid fa-gears"></i>
         <i class="fa fa-solid fa-caret-down"></i>
     </button>
     <div class="dropdown-container">
         <a href="https://www.latex-project.org/" target="_blank" rel="noopener noreferrer">Latex</a>
         <a href="https://www.overleaf.com/" target="_blank" rel="noopener noreferrer">Resume Builder - Overleaf</a>
         <a href="https://fontawesome.com/kits/b372081e34/setup?welcome=yes" target="_blank" rel="noopener noreferrer">Fontawesome
-            Icons</a>
+            Icons
+        </a>
+        <a href="https://beta.icloud.com/numbers/" target="_blank" rel="noopener noreferrer">
+            Numbers
+        </a>
+        <a href="https://beta.icloud.com/notes/0ccKyq1GCyGk1wMRuu8IlRRKQ" target="_blank" rel="noopener noreferrer">
+            Notes
+        </a>
     </div>
     <a href="https://www.icloud.com/numbers/004XnjZedG_UBH4WtiOIDJqWA#Credential_Information" target="_blank" rel="noopener noreferrer">
         <i class="fa fa-solid fa-key"></i>
